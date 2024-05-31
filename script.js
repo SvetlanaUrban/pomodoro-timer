@@ -11,7 +11,6 @@ startButton.addEventListener("click", () => {
     stopTimer();
     return;
   } 
-});
 
 timerId = setInterval(() => {
   let [minutes, seconds] = timerHolder.textContent.split(":").map(Number);
@@ -31,6 +30,7 @@ timerId = setInterval(() => {
 
 isRunning = !isRunning;
 startButton.textContent = isRunning ? "stop" : "start";
+});
 
 function format(val) {
   if (val < 10) {
